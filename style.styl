@@ -1,0 +1,243 @@
+body
+  background #36384D
+  font 14px Roboto, sans-serif
+
+html
+    padding 0
+    margin 0
+    box-sizing box-shadow
+
+.container
+    background white
+    border-radius 30px
+    width 100%
+    max-width 800px
+    margin 100px auto
+    margin-top 200px
+    display flex
+    justify-content center
+    align-items center
+    padding 20px
+
+.sub-container
+    padding 0 20px
+
+.check-containers
+    display flex
+    flex-wrap wrap
+
+.checkmarks
+form
+    margin 10px
+
+h1 
+    font-size 50px
+    color hsl(235, 18%, 26%)
+h1 
+.paragraph
+    margin 10px
+    margin-top 20px
+    margin-bottom: 20px
+
+
+.sentence
+    display flex
+    justify-content center
+    align-items center
+    margin 0
+    
+.paragraph
+.sentence
+    font-size 16px
+
+.sub 
+    line-height 0
+
+form
+    display flex
+    flex-direction column
+    margin-top 30px
+
+label
+input
+button
+    margin 10px 0
+
+label
+h1
+    font-weight 700
+
+input 
+button
+    height: 50px
+    border-radius: 10px
+    border: solid 1px hsl(231, 7%, 60%)
+    cursor: pointer
+
+input[type="email"]
+      padding-left: 25px;
+
+.custom-btn
+.my-confirm-button
+    background: hsl(234, 29%, 20%)
+    color: hsl(0, 0%, 100%)
+    &:hover
+         background rgb(255,100,75) !important
+         border none !important
+         box-shadow: 0px 22px 37px 5px rgba(255,100,75,0.33) !important
+   
+
+.sub-container-two 
+    width 100%
+    border-radius: 0
+
+/* Style the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.my-confirm-button 
+      font 14px Roboto, sans-serif 
+      border-radius 10px !important
+      background-color #242742 !important
+      color white !important
+      width 70% !important
+      letter-spacing 1px
+
+.my-popup-container 
+      border-radius 30px !important
+      
+    
+.swal2-container
+    background-color: #36384D !important
+
+#success-message
+    line-height 20px !important
+    text-align left
+    padding 0 30px
+    margin-bottom 10px
+    font 14px Roboto, sans-serif
+
+.swal2-title
+    color hsl(234, 29%, 20%) !important
+    font-size 3em !important
+    padding-left 1.5em !important
+    padding-right 1.5em !important
+    text-align left !important
+
+#popup 
+      display none !important
+      position fixed
+      left 0
+      top 0
+      width 100%
+      height 100%
+      background-color rgba(0, 0, 0, 0.5)
+      align-items center
+      justify-content center
+      z-index 1000
+    
+
+.popup-content 
+      background-color white
+      padding 20px
+      padding-bottom 0
+      padding-top 0
+      border-radius 10px
+      max-width 400px
+
+.swal2-container.swal2-center>.swal2-popup
+      padding-bottom 60px !important
+
+
+.error-message 
+    display none
+    color red
+    text-align right
+    margin-top -28px
+
+     /* Add the CSS for input error state */
+.input-email 
+    background-color: white /* Reset the background color */
+    border: 1px solid #ccc /* Reset the border color */
+    color: #333 /* Reset the text color */
+    
+.input-error 
+    background-color: #ffe6e6
+    border: 1px solid red
+    color: red
+
+@media (max-width 768px)
+    body
+        margin 0
+    .container
+        flex-direction column-reverse
+        margin 0
+        padding 0
+        border-radius 0
+    .right-image
+        width 100%
+    h1
+        font-size 2.1rem
+    #check-mid
+    #check-top
+        line-height 20px
+    #check-mids
+    #check-tops
+        margin-top 0
+        margin-right 20px
+    #check-bottoms
+        margin-right 20px
+    .desktop-image
+        display none
+    .error-message 
+        margin-top: -29px
+    .sub.mid
+        margin-top 15px
+    .sub-container
+        padding: 0 15px
+
+
+    
+@media (min-width 769px)
+    .mobile-image
+        display none
+
+
+
+
+
+
+      

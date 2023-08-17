@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
+  <title>Stay! Updated</title>
+</head>
+<body>
+  <audio id="buttonSound">
+    <source src="/clik.mp3" type="audio/mpeg">
+  </audio>
+  <div class="container">
+    <div class="sub-container">
+      <h1>Stay updated!</h1>
+      <p class="paragraph">Join 50,000+ product managers receiving monthly updates on:</p>
+      <div class="check-containers">
+        <div class="sub">
+            <p class="sentence" id="check-top"><img id="check-tops" class="checkmarks" src="/assets/images/icon-list.svg" alt="check">Product discovery and building what matters</p>
+        </div>
+        <div class="sub mid">
+            <p class="sentence" id="check-mid"><img id="check-mids" class="checkmarks" src="/assets/images/icon-list.svg" alt="check">Measuring to ensure updates are a success</p>
+        </div>
+        <div class="sub">
+            <p class="sentence"><img id="check-bottoms" class="checkmarks" src="/assets/images/icon-list.svg" alt="check">And much more!</p>
+        </div>
+      </div>
+      <form onsubmit="return validateEmail();">
+        <label for="">Email Address</label>
+        <div id="email-error" class="error-message"></div>
+        <input class="input-email" type="email" name="email" id="email" placeholder="email@company.com">
+        <button class="custom-btn" type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+    <div class="sub-container-two">
+      <img class="desktop-image" src="/assets/images/illustration-sign-up-desktop.svg" alt="sign up">
+      <img class="mobile-image" src="/assets/images/illustration-sign-up-mobile.svg" alt="sign up">
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <div class="popup">
+        <p id="success-message"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
+  <script>
+
+    function playButtonSound() {
+      var buttonSound = document.getElementById('buttonSound');
+      buttonSound.play();
+    }
+
+    function showPopup() {
+      var email = document.getElementById('email').value;
+      var successMessage = document.getElementById('success-message');
+      successMessage.innerHTML = `A confirmation email has been sent to <strong>${email}</strong>. Please open it and click the button inside to confirm your subscription.`;
+
+      playButtonSound();
+
+      Swal.fire({
+        title: 'Thanks for Subscribing!',
+        html: document.getElementById('popup').innerHTML,
+        icon: 'success',
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: 'Dismiss Message',
+        confirmButtonClass: 'my-confirm-button',
+        customClass: {
+          popup: 'my-popup-container',
+          container: 'swal2-container',
+          message: 'success-message',
+          title: 'title',
+          icon: 'svg-icon'
+        }
+      });
+    }
+
+    function closePopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "none";
+    }
+
+    function isValidEmail(email) {
+      // Regular expression for strict email validation
+      var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      return emailPattern.test(email);
+    }
+
+    function validateEmail() {
+      var email = document.getElementById('email').value;
+      var emailInput = document.getElementById('email');
+      var emailError = document.getElementById('email-error');
+
+      if (!isValidEmail(email)) {
+        emailError.innerText = 'Valid email required.';
+        emailError.style.display = 'block';
+        emailInput.classList.add('input-error'); // Add the class to change background and border
+        return false;
+      } else {
+        emailError.style.display = 'none';
+        emailInput.classList.remove('input-error'); // Remove the class
+        showPopup(); // Call the showPopup function if validation passes
+        return false; // Return false to prevent form submission
+      }
+    }
+  </script>
+</body>
+</html>
