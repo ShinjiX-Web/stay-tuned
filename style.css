@@ -180,6 +180,7 @@ input[type="email"] {
   display: none;
   color: #f00;
   text-align: right;
+  margin-top: -28px;
 }
 .input-email {
   background-color: #fff /* Reset the background color */;
