@@ -180,7 +180,6 @@ input[type="email"] {
   display: none;
   color: #f00;
   text-align: right;
-  margin-top: -28px;
 }
 .input-email {
   background-color: #fff /* Reset the background color */;
@@ -192,9 +191,6 @@ input[type="email"] {
   border: 1px solid #f00;
   color: #f00;
 }
-
-
-
 @media (max-width: 768px) {
   body {
     margin: 0;
@@ -234,6 +230,14 @@ input[type="email"] {
   }
   .sub-container {
     padding: 0 15px;
+  }
+  .swal2-container {
+    padding: 0 !important;
+    background-color: #fff !important;
+  }
+  .swal2-popup {
+    border-radius: 0 !important;
+    height: 100%;
   }
 }
 @media (min-width: 769px) {
