@@ -49,68 +49,7 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
-  <script>
-
-    function playButtonSound() {
-      var buttonSound = document.getElementById('buttonSound');
-      buttonSound.play();
-    }
-
-    function showPopup() {
-      var email = document.getElementById('email').value;
-      var successMessage = document.getElementById('success-message');
-      successMessage.innerHTML = `A confirmation email has been sent to <strong>${email}</strong>. Please open it and click the button inside to confirm your subscription.`;
-
-      playButtonSound();
-
-      Swal.fire({
-        title: 'Thanks for Subscribing!',
-        html: document.getElementById('popup').innerHTML,
-        icon: 'success',
-        showCloseButton: true,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText: 'Dismiss Message',
-        confirmButtonClass: 'my-confirm-button',
-        customClass: {
-          popup: 'my-popup-container',
-          container: 'swal2-container',
-          message: 'success-message',
-          title: 'title',
-          icon: 'svg-icon'
-        }
-      });
-    }
-
-    function closePopup() {
-      var popup = document.getElementById("popup");
-      popup.style.display = "none";
-    }
-
-    function isValidEmail(email) {
-      // Regular expression for strict email validation
-      var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      return emailPattern.test(email);
-    }
-
-    function validateEmail() {
-      var email = document.getElementById('email').value;
-      var emailInput = document.getElementById('email');
-      var emailError = document.getElementById('email-error');
-
-      if (!isValidEmail(email)) {
-        emailError.innerText = 'Valid email required.';
-        emailError.style.display = 'block';
-        emailInput.classList.add('input-error'); // Add the class to change background and border
-        return false;
-      } else {
-        emailError.style.display = 'none';
-        emailInput.classList.remove('input-error'); // Remove the class
-        showPopup(); // Call the showPopup function if validation passes
-        return false; // Return false to prevent form submission
-      }
-    }
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>

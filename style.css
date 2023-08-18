@@ -220,6 +220,10 @@ input[type="email"] {
   #check-bottoms {
     margin-right: 20px;
   }
+  #success-message,
+  .popup-content {
+    padding: 0;
+  }
   .desktop-image {
     display: none;
   }
@@ -239,6 +243,26 @@ input[type="email"] {
   .swal2-popup {
     border-radius: 0 !important;
     height: 100%;
+  }
+  .swal2-close {
+    display: none !important;
+  }
+  .swal2-title {
+    padding: 20px !important;
+    padding-bottom: 0 !important;
+  }
+  .swal2-html-container {
+    padding-top: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .my-confirm-button {
+    width: 100% !important;
+    max-width: 335px;
+    margin-top: 160px !important;
+  }
+  .swal2-container.swal2-center>.swal2-popup {
+    padding-bottom: 0 !important;
   }
 }
 @media (min-width: 769px) {
