@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" role="main">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
-  <title>Stay! Updated</title>
+  <title role="main">Stay! Updated</title>
 </head>
 <body>
   <audio id="buttonSound">
@@ -16,8 +16,8 @@
   <div class="container">
     <div class="sub-container">
       <h1>Stay updated!</h1>
-      <p class="paragraph">Join 50,000+ product managers receiving monthly updates on:</p>
-      <div class="check-containers">
+      <p class="paragraph" role="contentinfo">Join 50,000+ product managers receiving monthly updates on:</p>
+      <div class="check-containers" role="contentinfo">
         <div class="sub">
             <p class="sentence" id="check-top"><img id="check-tops" class="checkmarks" src="assets/images/icon-list.svg" alt="check">Product discovery and building what matters</p>
         </div>
@@ -29,14 +29,14 @@
         </div>
       </div>
       <form onsubmit="return validateEmail();">
-        <label for="email">Email Address</label>
+        <label for="email" role="contentinfo">Email Address</label>
         <div id="email-error" class="error-message"></div>
         <input class="input-email" type="email" name="email" id="email" placeholder="email@company.com">
         <button class="custom-btn" type="submit">Subscribe to monthly newsletter</button>
       </form>
     </div>
     <div class="sub-container-two">
-      <img class="desktop-image" src="assets/images/illustration-sign-up-desktop.svg" alt="sign up">
+      <img class="desktop-image" src="assets/images/illustration-sign-up-desktop.svg" alt="sign up" role="contentinfo">
       <img class="mobile-image" src="assets/images/illustration-sign-up-mobile.svg" alt="sign up">
     </div>
   </div>
